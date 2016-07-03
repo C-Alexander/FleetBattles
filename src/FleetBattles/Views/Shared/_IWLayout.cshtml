@@ -1,0 +1,61 @@
+﻿@using System
+<HTML>
+<HEAD>
+    <LINK REL=STYLESHEET HREF=~/css/Style.css>
+    <title>@ViewData["Title"] - Interstellar War: Free browser based space MMORPG (multiplayer online role-playing game)</title>
+    <META NAME="Keywords" CONTENT="interstellar war, free, massive, massively, multiplayer, online, game, battle, space, mmog, mmorpg, role play, role playing, strategic, strategy, diplomacy">
+    <META NAME="Description" CONTENT="A free browser based massively multiplayer online role-playing game set in space">
+    <script type='text/javascript' src='http://finity.online/applications/cms/interface/external/external.js' id='ipsWidgetLoader'></script>
+</HEAD>
+<BODY>
+    <TABLE>
+        <TR>
+            <TD width=182 class="C T">
+                <TABLE class="W T1">
+                    <TR><TD class=C><A href=http://www.interstellar-war.com/><IMG src="~/images/i/IWFB logo.gif"></A>
+                        <BR>Interstellar Time: @TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById("W. Europe Standard Time")).ToString("HH:mm")</TD></TR>
+                </TABLE><img src=~/images/i/sp.gif height=4><TABLE class="W T1">
+                    <FORM action=Home.asp?Act =SignIn method=Post>
+                        <TR><TD class=R>Email :</TD><TD><INPUT name=Mail tabindex=1 size=12 value=></TD><TD class=C rowspan=3><INPUT type=Submit value=Go! class=BTN><BR><INPUT name=Save tabindex=3 type=checkbox value=1 class=X><BR>Auto</TD></TR>
+                        <TR><TD class=R>Pass :</TD><TD><INPUT name=Pass tabindex=2 type=Password size=12></TD></TR>
+                        <TR>
+                            <TD colspan=2>
+                                <IMG src=~/images/i/li.gif><a asp-area="" asp-controller="Account" asp-action="Register">Create Account</a><BR>
+                                <IMG src=~/images/i/li.gif><a asp-area="" asp-controller="Account" asp-action="ForgotPassword">Lost password?</a>
+                            </TD>
+                        </TR>
+                    </FORM>
+                </TABLE><IMG src=~/images/i/sp.gif height=4><TABLE class="W T1">
+                    <TR><TH>Public Links</TH></TR>
+                    <TR>
+                        <TD>
+                            <IMG src=~/images/i/li.gif><A href=Home.asp?ID =>Interstellar Home</A><BR>
+                            <IMG src=~/images/i/li.gif><A href=Ranking.asp?ID =>Rankings</A><BR>
+                            <IMG src=~/images/i/li.gif><A href=Guide.asp?ID =>Guide</A> | <A target=_blank href=/web/20070505100253/http://www.beast.za.net />Help Site</A> | <A href=Help.asp?P =Help&amp;ID =>Wiki</A><BR>
+
+                            <IMG src=~/images/i/li.gif><A href=Story.asp?ID =>Story</A> | <A href=Community.asp?ID =>Community</A> | <A href=About.asp?ID =>About</A><BR>
+                            <IMG src=~/images/i/li.gif><A href=Release.asp?ID =>Release Notes</A><BR>
+                            <IMG src=~/images/i/li.gif><A href=Vote.asp target=_blank><B><U>Vote for us!</B></U></A>
+                        </TD>
+                    </TR>
+                    <TR><TH>Private Links</TH></TR>
+                    <TR>
+                        <TD>
+                            <IMG src=~/images/i/li.gif>Play Fleet Battles !<BR>
+                            <IMG src=~/images/i/li.gif>Forums & Online Chat<BR>
+                        </TD>
+                    </TR>
+                </TABLE>
+            </TD>
+            <TD width=4><IMG src=~/images/i/sp.gif width=4></TD>
+            <TD width=813 class="T C">
+                @RenderBody()
+</TR><TR><TD class=C colspan=3>
+    @{
+        decimal timeInSeconds = ((decimal)(DateTime.Now.Ticks - ((DateTime) Context.Items["StartTime"]).Ticks)) / (decimal)TimeSpan.TicksPerSecond; ;
+    }
+    @timeInSeconds<BR>The game, content and mechanics are <a href="Copy.asp?ID=">copyright</a> © of the Original Interstellar War team 2005.
+        </TD></TR></TABLE>
+    @RenderSection("scripts", required: false)
+</BODY>
+</HTML>

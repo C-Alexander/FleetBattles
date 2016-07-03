@@ -81,6 +81,12 @@ namespace FleetBattles
             app.UseApplicationInsightsExceptionTelemetry();
 
             app.UseStaticFiles();
+            app.UseDeveloperExceptionPage();
+            app.UseDatabaseErrorPage();
+            app.Use(next => async context => {
+                context.Items["StartTime"] = DateTime.Now;
+                await next.Invoke(context);
+            });
 
             app.UseIdentity();
 

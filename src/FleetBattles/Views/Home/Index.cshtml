@@ -1,109 +1,110 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
+<!--<TABLE class="W T4">
+<TR><TH><H1>Welcome to Interstellar War</H1></TH></TR>
+</TABLE>-->
+<IMG src=~/images/i/banner2.gif>
+<TABLE class=W>
+    <TR>
+        <TD class=T>
+            <div id='block_7ea8fe7b31ca6fcf63327983a387f8a1' data-blockID='latest-news' class='ipsExternalWidget' data-inheritStyle='true'></div>
+            @*<TR>
+                    <TD class=T>
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <img src="~/images/banner1.svg" alt="ASP.NET" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how to build ASP.NET apps that can run anywhere.
-                    <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner2.svg" alt="Visual Studio" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    There are powerful new features in Visual Studio for building modern web apps.
-                    <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner3.svg" alt="Package Management" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Bring in libraries from NuGet, Bower, and npm, and automate tasks using Grunt or Gulp.
-                    <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkID=525029&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner4.svg" alt="Microsoft Azure" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how Microsoft's Azure cloud platform allows you to build, deploy, and scale web apps.
-                    <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-    </div>
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
+                        <TABLE class="W T3">
 
-<div class="row">
-    <div class="col-md-3">
-        <h2>Application uses</h2>
-        <ul>
-            <li>Sample pages using ASP.NET Core MVC</li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkId=518004">Bower</a> for managing client-side libraries</li>
-            <li>Theming using <a href="http://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>How to</h2>
-        <ul>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkID=398600">Add a Controller and View</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkID=699562">Add an appsetting in config and access it in app.</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkId=699315">Manage User Secrets using Secret Manager.</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkId=699316">Use logging to log a message.</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkId=699317">Add packages using NuGet.</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkId=699318">Add client packages using Bower.</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkId=699319">Target development, staging or production environment.</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Overview</h2>
-        <ul>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkId=518008">Conceptual overview of what is ASP.NET Core</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkId=699320">Fundamentals of ASP.NET Core such as Startup and middleware.</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkId=398602">Working with Data</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkId=398603">Security</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkID=699321">Client side development</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkID=699322">Develop on different platforms</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkID=699323">Read more on the documentation site</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Run & Deploy</h2>
-        <ul>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkID=517851">Run your app</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkID=517853">Run tools such as EF migrations and more</a></li>
-            <li><a href="http://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure Web Apps</a></li>
-        </ul>
-    </div>
-</div>
+                            <TR height=20><TH class=R><B>Donations received</B> - 07 Apr 2007 09:55 GMT
+                    </TD>
+                </TR>
+                <TR><TD class=TXT>A number of generous donations have been received - sufficient to keep the server online for another two months!  I'd like to thank the people who have donated publically, but will respect their privacy.<BR>&nbsp;- <A>Witchfinder, 15 comments</A></TD></TR>
+
+                <TR height=20>
+                    <TH class=R>
+                        <B>Closure Imminent</B> - 05 Apr 2007 23:34 GMT
+                        </TD>
+                </TR>
+                <TR><TD class=TXT>Due to a lack of funds to pay for the sever, I intend to terminate the web hosting contract on 12th April 2007.  We have been in this position before, and people have donated money to keep the server running.  To reitterate, I will keep the game going as long as the money is there to pay for it.  However, as I now have two children, I am no longer able to fund web hosting out of my own pocket.<BR><BR>I will have a clear date for the end of the game once I have been in contact with the ISP.<BR><BR>Yours with regret,<BR>&nbsp;- <A>Witchfinder, 32 comments</A></TD></TR>
+
+                <TR height=20><TH class=R><B>Information update</B> - 15 Mar 2007 20:25 GMT</TD></TR>
+                <TR><TD class=TXT>It has been a while since we told the players what is going on with the game, and it's only fair we keep you up to date.  Firstly, we have just paid for the next month of hosting, so the game is fine for another 30 days.  Many, <b>many</b> thanks to everyone who has donated, one in particular who donated almost an entire months hosting fees in one go.  However, to keep the game going we still need your donations.<BR><BR>Development of the game has come to a halt while we assess the technology.  At the moment, we are unsatisifed with many aspects of the user interface and the security issues that it poses.  We are aware that there are a lot of loopholes that have been exploited, and this just proves that Interstellar War, while an excellent technology demo, has a number of fundamental flaws.  It is unlikely that we will be carrying the game forwards in its current guise.<BR><BR>Mr Tea and I are working on a new project as time permits.  We can't say any more at the moment, but it is very different to Interstellar War.  However, we love this game and it has been an excellent learning experience.  Into the future, we can safely say that we would like to do Interstellar War 2.<BR><BR>What does this mean for the game in its current form?  Well, we have decided to do no further development other than major bug-fixes where they arise.  We have no plans to shut the game off as long as there is support in the community to keep the game and the server running, so if you want to keep the game going, please do keep those donations coming in.  Every penny you send us is spent on keeping the server running.<BR><BR><b>We would like the community to compile a list of the most pressing issues and bugs that need fixing.  Once this list is compiled, we'll do what we can with it to get the game into a stable state</b><BR>&nbsp;- <A>Witchfinder, 24 comments</A></TD></TR>
+
+                <TR height=20><TH class=R><B>New Help Site</B> - 15 Mar 2007 20:10 GMT</TD></TR>
+                <TR><TD class=TXT>A big thanks goes to Napster for developing his new help site.  You can visit it at <a target=_blank href="/web/20070505100253/http://www.iswhelpsite.com/">HERE</a><BR>&nbsp;- <A>Witchfinder, 8 comments</A></TD></TR>
+
+                <TR height=20><TH class=R><B>Server Down</B> - 15 Mar 2007 20:05 GMT</TD></TR>
+                <TR><TD class=TXT>The server was down for a time because it froze in the middle of a scheduled windows update reboot ! You can blame Bill for that one. Thanks to one of our players for getting in touch to resolve the problem.<BR><BR>Have Fun !<BR>&nbsp;- <A>Mr Tea, 28 comments</A></TD></TR>
+
+                <TR height=20><TH class=R><B>Donations</B> - 01 Feb 2007 10:22 GMT</TD></TR>
+                <TR><TD class=TXT>Thank you to the players who have donated money via PayPal over the past day.  We now have just enough money to keep the game running for another month.  However, if we wish to keep the game running beyond that date, I would ask anyone who is able to give what they can.<BR><BR>Thanks again!<BR>&nbsp;- <A>Witchfinder, 43 comments</A></TD></TR>
+
+                <TR height=20><TH class=R><B>Lack of funds</B> - 30 Jan 2007 22:17 GMT</TD></TR>
+                <TR><TD class=TXT>Dear players,<BR><BR>It is with regret that I must announce I am no longer able to fund Interstellar War out of my own pocket.  I'm afraid that the cost of hosting a server is something I can no longer afford whilst bringing up a young family.  This decision has been a very painful one, and it is difficult to let go after all of the hard work I've put in.<BR><BR>I'd like to take this opportunity to thank everyone for their support, and for all the fun we've had together.  I will give a more firm disconnection date once I have contacted the ISP.<BR><BR>Best wishes,<BR><BR>&nbsp;- <A>Witchfinder, 81 comments</A></TD></TR>
+
+                <TR height=20><TH class=R><B>News Update</B> - 16 Jan 2007 22:10 GMT</TD></TR>
+                <TR><TD class=TXT>Dear players,<BR><BR>I apologise for my prolonged absence from the game, and from development.  A second child is proving to be much more demanding than I had expected.  However, you can rest assured that I haven't forgotten about you or Interstellar War.  Keep having fun, and please be patient.<BR><BR>Best wishes,<BR><BR>&nbsp;- <A>Witchfinder, 38 comments</A></TD></TR>
+
+                <TR height=20><TH class=R><B>Security Alert</B> - 04 Dec 2006 11:05 GMT</TD></TR>
+                <TR><TD class=TXT>We have identified a potential security risk for users.  It has come to our attention that at least one website is offering external hosting for the Image Pack.  Users should be aware that obtaining files from these sites poses a danger to account and session security. We have removed all existing links to external sites.  If you are unable to get the image pack working locally, we suggest you remain connected to the images on the server.<BR>&nbsp;- <A>Witchfinder, 20 comments</A></TD></TR>
+
+                <TR height=20><TH class=R><B>Planetary structure updates</B> - 30 Nov 2006 21:18 GMT</TD></TR>
+                <TR><TD class=TXT>As promised, the first round of updates have been completed.  Most planetary weapons have had their range reduced.  Planetary shields now regenerate at double the normal rate.<BR><BR>Additionally, the starmap has been spaced out a little more.<BR>&nbsp;- <A>Witchfinder, 27 comments</A></TD></TR>
+
+                <TR height=20><TH class=R><B>Forthcoming changes</B> - 29 Nov 2006 10:06 GMT</TD></TR>
+                <TR><TD class=TXT>Over the next few momths, a number of game changes will be made, many of them quite significant.  Most players will already be aware of the imminent reset.  This will be a strategic and economic reset.  That means that all personal equipment, ships and buildings in the game will be destroyed, all players and governments will be reset to a basic amount of money and requisition, and all planets will revert to their original ownership status.<BR><BR>Secondly, we are making major revisions to practially all ship designs.  These replacement designs will be phased in over a period of time.  For testing purposes, the ships will initially be very cheap to buy.  However, once the testing phase is completed, such ships will be destroyed and &quot;live&quot; prices will be set.  During this period, there will be temporary &quot;Total War&quot; - all races will have an enforced War status against all other races.<BR><BR>Thirdly, we are planning a overhaul of the government system.  Some races are being hobbled by bad government or by exploits in the government system.  We want to stamp this out permanently.<BR><BR>Fourthly, we are continuing to review a number of balance issues: ship experience, requisition awards and planetary defences being main points of review.  You can expect these to change at short notice, and we appreciate any comments and feedback you may have.<BR><BR>Finally, I am working on a pet project at the moment that will make a cool addition to the game.  More news on this soon.<BR><BR>&nbsp;- <A>Witchfinder, 41 comments</A></TD></TR>
+
+                <TR height=20><TH class=R><B>Forum Clean-up</B> - 27 Nov 2006 22:45 GMT</TD></TR>
+                <TR><TD class=TXT>Due to the size of the ever-expanding database, we have been forced, unfortunately, to delete existing guild forums, posts and threads.  We apologise for any inconvenience this may cause, but the clutter was starting to harm game performance.<BR>&nbsp;- <A>Witchfinder, 19 comments</A></TD></TR>
+
+                <TR height=20><TH class=R><B>Game Changes</B> - 22 Nov 2006 20:47 GMT</TD></TR>
+                <TR><TD class=TXT>We have been making a number of changes behind the scenes.  Firstly, the &quot;Design&quot; skill has been superseded by the &quot;Luck&quot; skill.  What does it do?  That's up to you to find out!  Design is still on your screen, and may make it back into the game at a future date, but it won't be in the short to medium term.<BR><BR>Furthermore, ship experience will no longer be awarded for NPC kills!  You can only upgrade ships now by participating in PVP combat.<BR>&nbsp;- <A>Witchfinder, 58 comments</A></TD></TR>
+
+                <TR height=20><TH class=R><B>The Va'Tal Republic</B> - 21 Nov 2006 23:10 GMT</TD></TR>
+                <TR><TD class=TXT>The Va'Tal republic have been rediscovered in the Polaris system!   They are a friendly and democratic people, but their military officers are known to get nervous if their ships are approached too closely.<BR>&nbsp;- <A>Witchfinder, 22 comments</A></TD></TR>
+
+                <TR height=20><TH class=R><B>Contributions</B> - 15 Nov 2006 23:03 GMT</TD></TR>
+                <TR><TD class=TXT>I'd like to thank everyone who has been posting artwork contributions in the development forum.  A lot of the ship designs really are excellent, and I now have a mini-project going to get some of them into the game.  Well done everyone!<BR>&nbsp;- <A>Witchfinder, 17 comments</A></TD></TR>
+
+                <TR height=20><TH class=R><B>Balance Changes and News</B> - 15 Nov 2006 19:20 GMT</TD></TR>
+                <TR><TD class=TXT>In the interests of balance, the following changes have been made to the game:<BR><ul><BR><li>Instant hyperspace has been removed.  The minimum hyperspace time is now 15 seconds.</li><BR><li>The basic time to enter hyperspace has been increased to 45 seconds.</li><BR><li>The scaling for hyperdrive upgrades has been adjusted to be less steep.</li><BR><li>All planetary structures have had a reduction in their hitpoints of 30%.</li><BR><li>Ship-kill requisition will now only be awarded for rank 4 ships and above.</li><BR></ul><BR><BR>Additionally, in my absence, the report database has grown out of control.  Unfortunately, I've had no choice but to delete all pending reports.  Please re-report any <b>important</b> issues and we can start with a clean sheet.<BR>&nbsp;- <A>Witchfinder, 33 comments</A></TD></TR>
+
+                <TR height=20><TH class=R><B>Continued absence</B> - 19 Oct 2006 19:43 GMT</TD></TR>
+                <TR><TD class=TXT>I'm well aware that my continued absence from the game (and the lack of updates) is causing some concern.  I want to assure the players that I've not abandoned the game.  I have a lot of work on at the moment and it's difficult to find time to do anything else!<BR>&nbsp;- <A>Witchfinder, 29 comments</A></TD></TR>
+
+                <TR height=20><TH class=R><B>Holiday</B> - 22 Sep 2006 17:29 GMT</TD></TR>
+                <TR><TD class=TXT>I will be on holiday for the next week.  Weather's brilliant and I'm having fun.  Wish you were here.<BR><BR>Cheers,<BR><BR>&nbsp;- <A>Witchfinder, 27 comments</A></TD></TR>
+
+                <TR height=20><TH class=R><B>Updates coming</B> - 18 Sep 2006 20:08 GMT</TD></TR>
+                <TR><TD class=TXT>Dear players,<BR><BR>Firstly, I'd like to apologise for my prolonged absence from the game.  I have been taking a break to marshal my thoughts and think about the direction I'll be taking Interstellar War in.<BR><BR>Next, I'd like to talk briefly about some of the things we have in store.  First of all, we have a major ship balancing overhaul coming soon.  This will restore some of the diversity to the theme and flavour of the different races.  We will also be addressing any balancing issues at the same time.<BR><BR>Then we will likely be doing an economic and strategic reset.  This means that most money, buoldings, resources and ships will be purged from the game.  Also, all planets will be reset to their original owners and states.<BR><BR>This represents a large change, so I wish to consult with the playerbase first.  The main reason for doing this is to start again from scratch and assess the balancing factors that have been added to the game.  Additionally, we wish to implement economic drains at the same time, in order to return the in-game economy to control.<BR><BR>These changes won't all come immediately, and they won't all come at the same time.<BR><BR>Of course, this is all in addition to new content, ships, stars and all the other cool things we're planning to add to the game.  That development list never seems to shrink.<BR><BR>Finally, I'd like to thank everyone for playing.  Keep having fun out there.<BR>&nbsp;- <A>Witchfinder, 41 comments</A></TD></TR>
+
+                <TR height=20><TH class=R><B>Last minute rescue</B> - 15 Aug 2006 10:19 GMT</TD></TR>
+                <TR><TD class=TXT>I'd like to thank everyone who has donated money over the past few days.  We now have enough funds to keep the game running for a while longer.  However, we do still need your donations to keep Interstellar War alive.  Remember, any donation, no matter how small, will help.<BR><BR>Thank you!<BR>&nbsp;- <A>Witchfinder, 33 comments</A></TD></TR>
+
+</TABLE>*@
+
+        </TD><TD width=4><IMG src=~/images/i/sp.gif width=4></TD>
+<TD width=202 class=T>
+
+
+    <TABLE class="W T3">
+        <TR><TH>Overview</TH></TR>
+        <TR>
+            <TD class=TXT>
+                Interstellar War is a free to play online multi-player game of tactical space conflict. Requires only your web browser to play.
+                <BR><IMG src=~/images/i/li.gif><a asp-area="" asp-controller="Account" asp-action="Register">Create Account</a>
+            </TD>
+        </TR>
+    </TABLE><IMG src=~/images/i/sp.gif height=4><TABLE class="W T3">
+        <TR><TH>Featured Artwork</TH></TR>
+        <TR><TD class=C><iframe src="http://finity.online/applications/cms/interface/external/external.php?widgetid=2852be45233371405c1c5c30f70bfcc8&amp;blockid=featured-images" id="ipsFrame_2852be45233371405c1c5c30f70bfcc8" scrolling="no" style="width: 100%; border: 0px; opacity: 1; height: 235px;"></iframe></TD></TR>
+    </TABLE><IMG src=~/images/i/sp.gif height=4><TABLE class="W T3">
+        <TR><TH>Today's Poll</TH></TR>
+        <TR><TD class=TXT>Coming Soon</TD></TR>
+    </TABLE><IMG src=~/images/i/sp.gif height=4><TABLE class="W T3">
+        <TR><TH colspan=2>State: Development</TH></TR>
+
+        <TR><TD width=55% class=R>Game Day :&nbsp;<BR>Accounts :&nbsp;<BR>Active :&nbsp;<BR><A href=Online.asp?ID>Online :&nbsp;</A></TD><TD><A>0<BR>0<BR>0<BR>0</A></TD></TR>
+    </TABLE>
+
+</TD></TR>
+</TABLE></TD>

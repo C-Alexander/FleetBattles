@@ -1,0 +1,124 @@
+BODY {
+	background: URL(/images/i/stars.jpg);
+	color: #CCCCCC;
+	font: xx-small verdana;
+	margin: 0;
+	padding: 2;
+    scrollbar-face-color: #DCDCD9;
+    scrollbar-shadow-color: #FFFFFF;
+    scrollbar-highlight-color: #666666;
+    scrollbar-3dlight-color: #FFFFFF;
+    scrollbar-darkshadow-color: #888888;
+    scrollbar-track-color: #DCDCD9;
+    scrollbar-arrow-color: #666666}
+ 
+H1 {
+	color: #fc8036;
+	font: large Impact;
+	margin-top: 0;
+	margin-bottom: 2}
+H2 {
+	color: #fc8036;
+	font: medium Impact;
+	margin-top: 0;
+	margin-bottom: 0}
+		
+TABLE {
+	font: xx-small verdana;
+	border-collapse: collapse}
+TH {
+	background: URL(/images/i/T2.gif);
+	color: #eecf00;
+	font: x-small Verdana;
+	padding: 1}
+TD {
+	padding: 0}
+	
+IMG {
+	border: 0}
+	
+A {
+	color: #fc8036;
+	text-decoration: none}
+A:Hover {
+	text-decoration: underline}
+
+BLOCKQUOTE {
+	border: 1px solid #888888;
+	margin: 4;
+	margin-left: 20
+	}
+INPUT {
+	background: Black;
+	border: 1px Solid gray;
+	color: White;
+	font: 9pt Tahoma;
+	margin: 1;}
+TEXTAREA {
+	width: 100%;
+	color: White;
+	background: Black;
+	border: 1px solid gray;
+	font: 8pt Arial;
+    margin: 1;
+    scrollbar-face-color: #DCDCD9;
+    scrollbar-shadow-color: #FFFFFF;
+    scrollbar-highlight-color: #666666;
+    scrollbar-3dlight-color: #FFFFFF;
+    scrollbar-darkshadow-color: #888888;
+    scrollbar-track-color: #DCDCD9;
+    scrollbar-arrow-color: #666666}
+SELECT {
+	color: White;
+	background: #111111;
+	font: 7pt Verdana;
+    margin: 1}
+	
+.X	{
+	border: 0}
+.W {
+	width: 100%}
+.R {
+	text-align: right}
+.C {
+	text-align: center}
+.T {
+	vertical-align: top}
+.B {
+	vertical-align: bottom}
+
+.TXT {
+	padding: 6;
+	text-align: justify}
+.BTN {
+	border: 2px outset;
+	height: 21s;
+	background: #333333}
+.PIN {
+	font: xx-small Tahoma;
+	color: red;
+	position: absolute;
+}
+.PIB {
+	font: Bold xx-small Tahoma;
+	position: absolute;
+}
+.PIS {
+	font: xx-small Tahoma;
+	position: absolute;
+}
+	
+.T1 {
+	background: URL(/images/i/T1.gif);
+	border: 1px Solid SteelBlue}
+.T2 {
+	background: URL(/images/i/T2.gif)}
+.T3 {
+	background: URL(/images/i/T3.gif);
+	border: 1px Solid #888888}
+.T4 {
+	background: URL(/images/i/T4.gif);
+	border: 1px Solid #fc8036}
+.Tac {
+	background: URL(/images/i/Grid.gif);
+	border: 1px Solid #888888}

@@ -1,41 +1,123 @@
 ﻿@model RegisterViewModel
 @{
-    ViewData["Title"] = "Register";
+    ViewData["Title"] = "Sign up for Interstellar War";
 }
 
-<h2>@ViewData["Title"].</h2>
+<TABLE class="W T4">
+    <TR><TH><H1>@ViewData["Title"]</H1></TH></TR>
+</TABLE><IMG src=i/sp.gif height=4>
+<TABLE class=W>
+    <TR>
+        <TD width=56% class="T">
 
-<form asp-controller="Account" asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="form-horizontal">
-    <h4>Create a new account.</h4>
-    <hr />
-    <div asp-validation-summary="All" class="text-danger"></div>
-    <div class="form-group">
-        <label asp-for="Email" class="col-md-2 control-label"></label>
-        <div class="col-md-10">
-            <input asp-for="Email" class="form-control" />
-            <span asp-validation-for="Email" class="text-danger"></span>
-        </div>
-    </div>
-    <div class="form-group">
-        <label asp-for="Password" class="col-md-2 control-label"></label>
-        <div class="col-md-10">
-            <input asp-for="Password" class="form-control" />
-            <span asp-validation-for="Password" class="text-danger"></span>
-        </div>
-    </div>
-    <div class="form-group">
-        <label asp-for="ConfirmPassword" class="col-md-2 control-label"></label>
-        <div class="col-md-10">
-            <input asp-for="ConfirmPassword" class="form-control" />
-            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <button type="submit" class="btn btn-default">Register</button>
-        </div>
-    </div>
-</form>
+            <TABLE class="W T3">
+                @*<FORM action=?Act =SignUp method=Post>*@
+                    <TR><TH colspan=2>Required Details</TH></TR>
+                <TR><TD class=C>In-Game Name<BR><INPUT size=30 name=Name value="" maxlength=20></TD>
+                <TD class=C>Password<BR><INPUT size=30 name=Password value="" maxlength=50></TD></TR>
+                    <TR>
+                        <TD class=C>eMail Address<BR><INPUT size=30 name=Mail value="" maxlength=50></TD>
+                        <TD class=C>
+                            Race / Start Money<BR><SELECT style=width:196 name=Race>
+                                <OPTION value="7|The Slah'ke">The Slah'ke (Union) 700Cr</OPTION>
+                                <OPTION value="6|The Hive">The Hive (Hive) 600Cr</OPTION>
+                                <OPTION value="5|The Plexxans">The Plexxans (Federation) 500Cr</OPTION>
+                                <OPTION value="4|The Kolari">The Kolari (Nexus) 400Cr</OPTION>
+                                <OPTION value="3|The Orfine">The Orfine (Alliance) 300Cr</OPTION>
+                                <OPTION value="2|The Preservers">The Preservers (Matrix) 200Cr</OPTION>
+                                <OPTION value="1|The Brood">The Brood (Genus) 100Cr</OPTION>
+                                <OPTION value="0|The Terrans">The Terrans (Terran Empire) 0Cr</OPTION>
+                            </SELECT>
+                        </TD>
+                    </TR>
+                    <!--<TR><TH colspan=2>Optional Details</TH></TR>-->
+                    <TR><TD class=C colspan=2><BR>You may need to adjust your spam filter if you have problems<BR>NB: Your in-game name must be a realistic name, or will be removed"<BR><BR><INPUT class=BTN type=submit value="Sign me up !"><BR><BR></TD></TR>
+            </TABLE><IMG src=/images/i/sp.gif height=4><TABLE class="W T3">
+                <TR><TH>Terms of Use</TH></TR>
+                <TR>
+                    <TD class=TXT>
+                        <p>You will not attempt to cheat or knowingly exploit any bugs in the game.  If you find a bug, you should report it in the "Support" forum provided.</p>
+                        <p>You will not attempt to cause any <I title="offending their game character is quite acceptable">personal</I> offence, defamation, threat or harassment to other players of this game.  You should remember the clear distinction between players and characters.</p>
+                        <p>You will not impersonate a member of the Interstellar War game staff.</p>
+                        <p>You will not discuss or knowingly engage in any illegal activity using this site.</p>
+                        <p>Any breach of these terms could mean the immediate suspension of your account.</p>
+                        <p>We accept no responsibility or liability for loss or harm suffered as a result of playing Interstellar War.</p>
+                        <p>Please play responsibly, and above all, have fun!</p>
+                    </TD>
+                </TR>
+        </TABLE><img src=/images/i/sp.gif height=4><TABLE class="W T3">
+                <TR><TH>Privacy Policy</TH></TR>
+                <TR>
+                    <TD class=TXT>
+                        We will not knowingly divulge your email address to any third party or email you anything other than your account details unless you specifically ask.
+                        We do not track your activity within this site for any reason other than playing the game.
+                        Interstellar War will not attempt to store any cookies on your machine other than one containing your login details if you select auto sign-in on the upper left panel. Third party links (e.g. PayPal) may use cookies, refer to their respective sites for policy information.
+                    </TD>
+        </TD>
+    </TR>
+</TABLE>
+
+</TD><TD width=4><IMG src=/images/i/sp.gif width=4></TD>
+<TD class=T>
+
+    <TABLE class="W T3">
+        <TR><TH colspan=4>Race Summary</TH></TR>
+        <TR><TD class=C><U>Character Race</TD><TD class=C><U>Total</TD><TD class=C><U>Active</TD><TD class=C><U>Logo</TD></TR>
+
+        <TR><TD class=C>The Klakanids</TD><TD class=C>1</TD><TD class=C>0</TD><TD class=C><IMG src="i/The Klakanids/icon.gif"></TD></TR>
+
+        <TR><TD class=C>The Egarans</TD><TD class=C>1</TD><TD class=C>0</TD><TD class=C><IMG src="i/The Egarans/icon.gif"></TD></TR>
+
+        <TR><TD class=C>The Invaders</TD><TD class=C>3</TD><TD class=C>2</TD><TD class=C><IMG src="i/The Invaders/icon.gif"></TD></TR>
+
+        <TR><TD class=C>The Slah'ke</TD><TD class=C>1176</TD><TD class=C>70</TD><TD class=C><IMG src="i/The Slah'ke/icon.gif"></TD></TR>
+
+        <TR><TD class=C>The Hive</TD><TD class=C>1554</TD><TD class=C>72</TD><TD class=C><IMG src="i/The Hive/icon.gif"></TD></TR>
+
+        <TR><TD class=C>The Orfine</TD><TD class=C>1280</TD><TD class=C>75</TD><TD class=C><IMG src="i/The Orfine/icon.gif"></TD></TR>
+
+        <TR><TD class=C>The Plexxans</TD><TD class=C>1335</TD><TD class=C>76</TD><TD class=C><IMG src="i/The Plexxans/icon.gif"></TD></TR>
+
+        <TR><TD class=C>The Kolari</TD><TD class=C>943</TD><TD class=C>79</TD><TD class=C><IMG src="i/The Kolari/icon.gif"></TD></TR>
+
+        <TR><TD class=C>The Preservers</TD><TD class=C>1503</TD><TD class=C>80</TD><TD class=C><IMG src="i/The Preservers/icon.gif"></TD></TR>
+
+        <TR><TD class=C>The Brood</TD><TD class=C>1340</TD><TD class=C>112</TD><TD class=C><IMG src="i/The Brood/icon.gif"></TD></TR>
+
+        <TR><TD class=C>The Terrans</TD><TD class=C>2013</TD><TD class=C>154</TD><TD class=C><IMG src="i/The Terrans/icon.gif"></TD></TR>
+
+    </TABLE><IMG src=/images/i/sp.gif height=4><TABLE class="W T3">
+        <TR><TH colspan=4>Clan Summary</TH></TR>
+        <TR><TD class=C><U>Character Clan</TD><TD class=C><U>Total</TD><TD class=C><U>Active</TD><TD class=C><U>Logo</TD></TR>
+
+        <TR><TD class=C>Klakanid</TD><TD class=C>1</TD><TD class=C>0</TD><TD class=C><IMG src="i/clan/Klakanid.gif"></TD></TR>
+
+        <TR><TD class=C>Egaran</TD><TD class=C>1</TD><TD class=C>0</TD><TD class=C><IMG src="i/clan/Egaran.gif"></TD></TR>
+
+        <TR><TD class=C>Invaders</TD><TD class=C>3</TD><TD class=C>2</TD><TD class=C><IMG src="i/clan/Invaders.gif"></TD></TR>
+
+        <TR><TD class=C>Union</TD><TD class=C>1153</TD><TD class=C>65</TD><TD class=C><IMG src="i/clan/Union.gif"></TD></TR>
+
+        <TR><TD class=C>Federation</TD><TD class=C>1230</TD><TD class=C>66</TD><TD class=C><IMG src="i/clan/Federation.gif"></TD></TR>
+
+        <TR><TD class=C>Hive</TD><TD class=C>1448</TD><TD class=C>66</TD><TD class=C><IMG src="i/clan/Hive.gif"></TD></TR>
+
+        <TR><TD class=C>Nexus</TD><TD class=C>888</TD><TD class=C>67</TD><TD class=C><IMG src="i/clan/Nexus.gif"></TD></TR>
+
+        <TR><TD class=C>Alliance</TD><TD class=C>1257</TD><TD class=C>71</TD><TD class=C><IMG src="i/clan/Alliance.gif"></TD></TR>
+
+        <TR><TD class=C>Matrix</TD><TD class=C>1473</TD><TD class=C>75</TD><TD class=C><IMG src="i/clan/Matrix.gif"></TD></TR>
+
+        <TR><TD class=C>Genus</TD><TD class=C>1175</TD><TD class=C>93</TD><TD class=C><IMG src="i/clan/Genus.gif"></TD></TR>
+
+        <TR><TD class=C>Pirate</TD><TD class=C>728</TD><TD class=C>103</TD><TD class=C><IMG src="i/clan/Pirate.gif"></TD></TR>
+
+        <TR><TD class=C>Terran Empire</TD><TD class=C>1792</TD><TD class=C>112</TD><TD class=C><IMG src="i/clan/Terran Empire.gif"></TD></TR>
+
+    </TABLE>
+
+</TD></TR>
+</TABLE></TD>
 
 @section Scripts {
     @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
