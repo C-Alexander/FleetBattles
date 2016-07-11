@@ -18,7 +18,7 @@ namespace FleetBattles.Controllers
 
         public RaceController(ApplicationDbContext context)
         {
-            _context = context;    
+            _context = context;    //k
         }
 
         // GET: Race
