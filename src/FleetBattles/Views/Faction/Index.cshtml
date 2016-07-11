@@ -1,0 +1,65 @@
+@model IEnumerable<FleetBattles.Models.Faction>
+
+@{
+    ViewData["Title"] = "Index";
+}
+@await Html.PartialAsync("_ACPNav")
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Adjective)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IconURL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsPublic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogoURL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LongName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShortName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adjective)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IconURL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsPublic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LogoURL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LongName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShortName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.FactionId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.FactionId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.FactionId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

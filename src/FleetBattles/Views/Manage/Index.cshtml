@@ -1,4 +1,6 @@
-﻿@model IndexViewModel
+﻿@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+@model IndexViewModel
 @{
     ViewData["Title"] = "Manage your account";
 }

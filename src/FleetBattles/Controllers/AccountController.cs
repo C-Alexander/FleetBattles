@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using FleetBattles.Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -17,6 +18,7 @@ namespace FleetBattles.Controllers
     [Authorize]
     public class AccountController : Controller
     {
+        private ApplicationDbContext applicationDbContext;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly IEmailSender _emailSender;
@@ -28,13 +30,16 @@ namespace FleetBattles.Controllers
             SignInManager<ApplicationUser> signInManager,
             IEmailSender emailSender,
             ISmsSender smsSender,
-            ILoggerFactory loggerFactory)
+            ILoggerFactory loggerFactory,
+            [FromServices]ApplicationDbContext applicationDbContext)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _emailSender = emailSender;
             _smsSender = smsSender;
             _logger = loggerFactory.CreateLogger<AccountController>();
+
+            this.applicationDbContext = applicationDbContext;
         }
 
         //
@@ -92,6 +97,11 @@ namespace FleetBattles.Controllers
         public IActionResult Register(string returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
+            ViewData["Factions"] = applicationDbContext.Factions;
+            ViewData["Races"] = applicationDbContext.Races;
+            ViewData["Db"] = applicationDbContext;
+            ViewBag.Faction = new SelectList(applicationDbContext.Factions.Where(x => x.IsPublic).ToList(), "FactionId", "LongName");
+
             return View();
         }
 
@@ -106,6 +116,17 @@ namespace FleetBattles.Controllers
             if (ModelState.IsValid)
             {
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                user.FactionId = applicationDbContext.Factions.First(f => f.FactionId == model.Faction).FactionId;
+                user.RaceId = applicationDbContext.Factions.First(f => f.FactionId == model.Faction).RaceId;
+                user.DisplayName = model.UserName;
+                if (!applicationDbContext.Factions.First(f => f.FactionId == model.Faction).IsPublic)
+                { //stop them from being Invaders ;)
+                    ViewData["Factions"] = applicationDbContext.Factions;
+                    ViewData["Races"] = applicationDbContext.Races;
+                    ViewData["Db"] = applicationDbContext;
+                    ViewBag.Faction = new SelectList(applicationDbContext.Factions.Where(x => x.IsPublic).ToList(), "FactionId", "LongName");
+                    return View(model);
+                }
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -117,11 +138,14 @@ namespace FleetBattles.Controllers
                     //    $"Please confirm your account by clicking this link: <a href='{callbackUrl}'>link</a>");
                     await _signInManager.SignInAsync(user, isPersistent: false);
                     _logger.LogInformation(3, "User created a new account with password.");
-                    return RedirectToLocal(returnUrl);
+                    return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);
             }
-
+            ViewData["Factions"] = applicationDbContext.Factions;
+            ViewData["Races"] = applicationDbContext.Races;
+            ViewData["Db"] = applicationDbContext;
+            ViewBag.Faction = new SelectList(applicationDbContext.Factions.Where(x => x.IsPublic).ToList(), "FactionId", "LongName");
             // If we got this far, something failed, redisplay form
             return View(model);
         }

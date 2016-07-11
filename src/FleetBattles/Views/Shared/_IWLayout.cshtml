@@ -1,4 +1,7 @@
 ﻿@using System
+
+@inject SignInManager<ApplicationUser> ASignInManager
+@inject UserManager<ApplicationUser> AUserManager
 <HTML>
 <HEAD>
     <LINK REL=STYLESHEET HREF=~/css/Style.css>
@@ -15,17 +18,20 @@
                     <TR><TD class=C><A href=http://www.interstellar-war.com/><IMG src="~/images/i/IWFB logo.gif"></A>
                         <BR>Interstellar Time: @TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById("W. Europe Standard Time")).ToString("HH:mm")</TD></TR>
                 </TABLE><img src=~/images/i/sp.gif height=4><TABLE class="W T1">
-                    <FORM action=Home.asp?Act =SignIn method=Post>
-                        <TR><TD class=R>Email :</TD><TD><INPUT name=Mail tabindex=1 size=12 value=></TD><TD class=C rowspan=3><INPUT type=Submit value=Go! class=BTN><BR><INPUT name=Save tabindex=3 type=checkbox value=1 class=X><BR>Auto</TD></TR>
-                        <TR><TD class=R>Pass :</TD><TD><INPUT name=Pass tabindex=2 type=Password size=12></TD></TR>
-                        <TR>
-                            <TD colspan=2>
-                                <IMG src=~/images/i/li.gif><a asp-area="" asp-controller="Account" asp-action="Register">Create Account</a><BR>
-                                <IMG src=~/images/i/li.gif><a asp-area="" asp-controller="Account" asp-action="ForgotPassword">Lost password?</a>
-                            </TD>
-                        </TR>
-                    </FORM>
-                </TABLE><IMG src=~/images/i/sp.gif height=4><TABLE class="W T1">
+                   @if (!ASignInManager.IsSignedIn(User)) {
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <form asp-controller="Account" asp-action="Login" asp-route-returnurl="http://battles20160627075859.azurewebsites.net/" method="post">
+                            <TR><TD class=R>Email :</TD><TD><INPUT name=Email tabindex=1 size=12 value=></TD><TD class=C rowspan=3><INPUT type=Submit value=Go! class=BTN><BR><INPUT name="RememberMe" tabindex=3 type=checkbox value="true" class=X><BR>Auto</TD></TR>
+                            <TR><TD class=R>Pass :</TD><TD><INPUT name=Password tabindex=2 type=Password size=12></TD></TR>
+                            <TR>
+                                <TD colspan=2>
+                                    <IMG src=~/images/i/li.gif><a asp-area="" asp-controller="Account" asp-action="Register">Create Account</a><BR>
+                                    <IMG src=~/images/i/li.gif><a asp-area="" asp-controller="Account" asp-action="ForgotPassword">Lost password?</a>
+                                </TD>
+                            </TR>
+                        </FORM>
+                        }
+</TABLE><IMG src=~/images/i/sp.gif height=4><TABLE class="W T1">
                     <TR><TH>Public Links</TH></TR>
                     <TR>
                         <TD>
@@ -42,8 +48,11 @@
                     <TR>
                         <TD>
                             <IMG src=~/images/i/li.gif>Play Fleet Battles !<BR>
+                            @if (User.IsInRole("Admin")) { 
+                            <IMG src=~/images/i/li.gif><a asp-area="" asp-controller="ACP" asp-action="Index">Terrorize Users !</a><BR>
+                            }
                             <IMG src=~/images/i/li.gif>Forums & Online Chat<BR>
-                        </TD>
+</TD>
                     </TR>
                 </TABLE>
             </TD>

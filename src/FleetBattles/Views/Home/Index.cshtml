@@ -1,4 +1,8 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<ApplicationUser> ASignInManager
+@inject UserManager<ApplicationUser> AUserManager
+@{
     ViewData["Title"] = "Home";
 }
 <!--<TABLE class="W T4">
@@ -85,7 +89,7 @@
         </TD><TD width=4><IMG src=~/images/i/sp.gif width=4></TD>
 <TD width=202 class=T>
 
-
+@if (!ASignInManager.IsSignedIn(User)) {
     <TABLE class="W T3">
         <TR><TH>Overview</TH></TR>
         <TR>
@@ -94,7 +98,9 @@
                 <BR><IMG src=~/images/i/li.gif><a asp-area="" asp-controller="Account" asp-action="Register">Create Account</a>
             </TD>
         </TR>
-    </TABLE><IMG src=~/images/i/sp.gif height=4><TABLE class="W T3">
+    </TABLE>
+}
+<IMG src=~/images/i/sp.gif height=4><TABLE class="W T3">
         <TR><TH>Featured Artwork</TH></TR>
         <TR><TD class=C><iframe src="http://finity.online/applications/cms/interface/external/external.php?widgetid=2852be45233371405c1c5c30f70bfcc8&amp;blockid=featured-images" id="ipsFrame_2852be45233371405c1c5c30f70bfcc8" scrolling="no" style="width: 100%; border: 0px; opacity: 1; height: 235px;"></iframe></TD></TR>
     </TABLE><IMG src=~/images/i/sp.gif height=4><TABLE class="W T3">

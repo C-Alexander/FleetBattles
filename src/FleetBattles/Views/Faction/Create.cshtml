@@ -1,0 +1,83 @@
+@model FleetBattles.Models.Faction
+
+@{
+    ViewData["Title"] = "Create";
+}
+@await Html.PartialAsync("_ACPNav")
+<h2>Create</h2>
+
+<form asp-action="Create">
+    <div class="form-horizontal">
+        <h4>Faction</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Adjective" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Adjective" class="form-control" />
+                <span asp-validation-for="Adjective" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="IconURL" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="IconURL" class="form-control" />
+                <span asp-validation-for="IconURL" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <div class="checkbox">
+                    <input asp-for="IsPublic" />
+                    <label asp-for="IsPublic"></label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="LogoURL" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="LogoURL" class="form-control" />
+                <span asp-validation-for="LogoURL" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="LongName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="LongName" class="form-control" />
+                <span asp-validation-for="LongName" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="RaceId" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="RaceId" class="form-control" asp-items="ViewBag.RaceId"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ChannelId" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="ChannelId" class="form-control" asp-items="ViewBag.ChannelId"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ShortName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ShortName" class="form-control" />
+                <span asp-validation-for="ShortName" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

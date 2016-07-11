@@ -1,0 +1,54 @@
+@model FleetBattles.Models.Faction
+
+@{
+    ViewData["Title"] = "Details";
+}
+@await Html.PartialAsync("_ACPNav")
+<h2>Details</h2>
+
+<div>
+    <h4>Faction</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Adjective)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Adjective)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IconURL)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IconURL)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsPublic)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsPublic)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LogoURL)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LogoURL)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LongName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LongName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ShortName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ShortName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.FactionId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
