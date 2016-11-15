@@ -75,6 +75,10 @@
     }
   },
 
+  "runtimes": {
+    "win8-x86": {}
+  },
+
   "publishOptions": {
     "include": [
       "wwwroot",
